@@ -1,4 +1,5 @@
 import { Worker } from 'bullmq';
+import redis from '../config/redis.js';
 
 const emailWorker = new Worker(
   'emailQueue',
@@ -6,9 +7,6 @@ const emailWorker = new Worker(
     console.log('Processing job:', job.data);
   },
   {
-    connection: {
-      host: 'myredis.taskforce.run',
-      port: 32856,
-    },
+    connection: redis,
   }
 );
