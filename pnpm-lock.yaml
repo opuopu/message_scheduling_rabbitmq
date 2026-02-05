@@ -17,6 +17,9 @@ importers:
       express:
         specifier: ^5.2.1
         version: 5.2.1
+      ioredis:
+        specifier: ^5.9.2
+        version: 5.9.2
     devDependencies:
       ts-node-dev:
         specifier: ^2.0.0
