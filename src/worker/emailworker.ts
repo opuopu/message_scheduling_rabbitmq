@@ -29,6 +29,7 @@ const emailWorker = new Worker(
   {
     connection: redis,
     removeOnFail: { count: 0 },
+    removeOnComplete: { age: 3600, count: 1000, limit: 100 },
   }
 );
 
